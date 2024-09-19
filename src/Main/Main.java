@@ -31,7 +31,7 @@ Key Features:
  This system aims to provide a robust tool for educational institutions to manage
  student grading information effectively and accurately.
  **/
-package zeroPlag;
+package Main;
 
 import java.util.*;
 

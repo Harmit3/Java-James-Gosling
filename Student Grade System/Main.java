@@ -1,12 +1,12 @@
 /**
-Project :  Student Grading System
+Project:  Student Grading System
 Programming Language: Java
 Author: Harmit Patel
 Date: 4th July,2024.
 
 Purpose:
 
-   The Student Grading System is designed to manage a list of students,providing
+   The Student Grading System is designed to manage a list of students, providing
    functionalities to add, remove, search, and display student records.
 
    It  ensures that student IDs and names are unique, enforcing data integrity.

@@ -1,4 +1,6 @@
-package Main;//sum of 2 num. in any base
+package Main;
+
+//subtraction of 2 num. in any base
 
 //u can convert decimal to anything or anything to decimal.(nut not octal to binary so first convert into binary->decimal and decimal->octal)
 import java.util.*;
@@ -6,21 +8,27 @@ import java.util.*;
 
 public class Main{
     //get value in decimal
-    public static int add(int num1,int num2,int base){
+    public static int sub(int num1,int num2,int base){
         int sum=0;
         int carry=0;
         int p=1;
 
-        while(num1>0 || num2>0 || carry>0){
+        while(num2>0){
             int rem1=num1%10;
             int rem2=num2%10;
             num1=num1/10;
             num2=num2/10;
 
-            int rem=rem1+rem2+carry;
+            int rem=0;
+            rem2=rem2+carry;
 
-            carry=rem/base;
-            rem=rem%base;
+            if(rem2>=rem1){
+                carry=0;
+                rem=rem2-rem1;
+            }else{
+                carry=-1;
+                rem=rem2+base-rem1;
+            }
 
             sum=sum+rem*p;
             p=p*10;
@@ -44,7 +52,7 @@ public class Main{
         System.out.println("Enter a base of above numbers");
         int base=scn.nextInt();
 
-        int add=add(num1,num2,base);
+        int add=sub(num1,num2,base);
         System.out.println(add);
     }
 }
